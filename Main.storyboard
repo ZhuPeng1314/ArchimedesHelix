@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArchimedesHelix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -43,15 +43,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em0-Al-LZl">
                                 <rect key="frame" x="0.0" y="96" width="600" height="504"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kf-lY-4oO" customClass="CircleIcon" customModule="CircleAnimation" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kf-lY-4oO" customClass="CircleIcon" customModule="ArchimedesHelix" customModuleProvider="target">
                                         <rect key="frame" x="300" y="0.0" width="300" height="504"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="c1F-dQ-Qdv" appends="YES" id="IrF-wt-uS9"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-3U-uqL" customClass="CircleIconLineSpeed" customModule="CircleAnimation" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-3U-uqL" customClass="CircleIconLineSpeed" customModule="ArchimedesHelix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="504"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uq7-eE-Ifg" appends="YES" id="psh-r6-8R1"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -93,6 +101,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uq7-eE-Ifg">
+                    <connections>
+                        <action selector="startButtonPressed:" destination="BYZ-38-t0r" id="wMW-1e-bXu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="c1F-dQ-Qdv">
+                    <connections>
+                        <action selector="startButton2Pressed:" destination="BYZ-38-t0r" id="ZtN-Hk-r6x"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="288" y="319"/>
         </scene>
